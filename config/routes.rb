@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/user'
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/team', to: 'static_pages#team'
