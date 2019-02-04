@@ -1,2 +1,9 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Welcome All of you</h1>
+<p>Here are the list of the gossip:</p>
+<table><th><h2>Author</h2></th><th><h3>Title </h3></th></table>
+<% for i in 1..@users.length do i %>
+<table>
+	<td><p><%= @users.find(i).first_name%></p></td><td><p><%= @gossips.find(i).title %></p></td><td> <a href="user/<%=i%>">detail</a></td>
+</table>
+
+<% end %>

@@ -12,9 +12,9 @@
   <body>
     <header>
       <a href="/">Home</a>
-      <a href="static_pages/contact">Contact</a>
-      <a href="static_pages/team">Team</a>
-      <a href="static_pages/user">User</a>
+      <%= link_to "Contact", static_pages_contact_path %>
+      <%= link_to "Team", static_pages_team_path %>
+      <%= link_to "User", static_pages_user_path %> 
     </header>
     <%= yield %>
   </body>
