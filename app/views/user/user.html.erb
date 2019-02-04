@@ -1,2 +1,7 @@
-<h1>User#user</h1>
-<p>Find me in app/views/user/user.html.erb</p>
+<h1>The detail of the user <%=@all.find(@id).first_name%></h1>
+<p>His/her first_name: <%=@all.find(@id).first_name%></p>
+<p>His/her last_name: <%=@all.find(@id).last_name%></p>
+<p>the title: <%=@gossips.find(@id).title%></p>
+<p>the content: <%=@gossips.find(@id).content%></p>
+<p>the date of creation: <%=@gossips.find(@id).created_at%></p>
+<a href='/static_pages/user/<%=@id%>'>autheur</a>

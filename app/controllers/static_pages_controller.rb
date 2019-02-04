@@ -8,7 +8,6 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
-    @user = User.all
   end
 
   def welcome
@@ -16,5 +15,7 @@ class StaticPagesController < ApplicationController
   end
 
   def user
+    @get = params[:id]
+    @all = User.find(@get)
   end
 end
