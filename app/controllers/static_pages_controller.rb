@@ -6,9 +6,11 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    @user = User.all
   end
 
   def welcome
+    @user = params[:id]
   end
 
   def user
