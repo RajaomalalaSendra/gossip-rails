@@ -16,6 +16,6 @@ class StaticPagesController < ApplicationController
 
   def user
     @get = params[:id]
-    @all = User.find(@get)
+    @gossips = Gossip.find(@get)
   end
 end

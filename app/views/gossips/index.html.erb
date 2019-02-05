@@ -7,34 +7,16 @@
     <a class="btn btn-primary btn-lg" href="/gossips/new" role="button">New Gossip</a>
   </p>
 </div>
-<% for i in 1..(@users.length/3).to_i do i %>
+<% for i in 1..@gossips.length do i %>
 <div class="col-5">
   <div class="card bg-light mb-3" style="max-width: 20rem;">
-  <div class="card-header"><%= @users.find(i).created_at%></div>
+  <div class="card-header"><%= @gossips.find(i).created_at%></div>
   <div class="card-body">
-    <h5 class="card-title"><span class="badge badge-secondary">Author:</span> <%= @users.find(i).first_name%></h5>
+    <h5 class="card-title"><span class="badge badge-secondary">Author:</span> <%= @gossips.find(i).user.first_name%></h5>
       <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
       <a href="user/<%=i%>" class="btn btn-primary btn-lg" role="button">Detail</a>
   </div>
-</div>
-<%i+=1%>
-<div class="card bg-light mb-3" style="max-width: 20rem;">
-  <div class="card-header"><%= @users.find(i).created_at%></div>
-  <div class="card-body">
-    <h5 class="card-title"><span class="badge badge-secondary">Author:</span><%= @users.find(i).first_name%></h5>
-      <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
-      <a href="user/<%=i%>" class="btn btn-primary btn-lg" role="button">Detail</a>
   </div>
-</div>
-<%i+=1%>
-<div class="card bg-light mb-3" style="max-width: 20rem;">
-  <div class="card-header"><%= @users.find(i).created_at%></div>
-  <div class="card-body">
-    <h5 class="card-title"><span class="badge badge-secondary">Author:</span><%= @users.find(i).first_name%></h5>
-      <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
-      <a href="user/<%=i%>" class="btn btn-primary btn-lg" role="button">Detail</a>
-  </div>
-</div>  
 </div>
 
 <% end %>

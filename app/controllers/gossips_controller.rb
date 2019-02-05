@@ -13,7 +13,7 @@ class GossipsController < ApplicationController
   def create
     title = params[:title]
     content = params[:content]
-    @gossip = Gossip.new(title: title, content: content, user_id: 1)
+    @gossip = Gossip.new(title: title, content: content, user_id: 10)
     if @gossip.save
       redirect_to gossips_path
     else
