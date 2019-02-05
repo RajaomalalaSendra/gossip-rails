@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-	has_many :gossip
+	has_many :gossips
 	belongs_to :city
 end

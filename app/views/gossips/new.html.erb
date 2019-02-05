@@ -1,2 +1,9 @@
-<h1>Gossips#new</h1>
-<p>Find me in app/views/gossips/new.html.erb</p>
+<h1><span class="badge badge-primary">NEW GOSSIP</span></h1>
+<div class="alert alert-dismissible alert-success">
+	<form action="gossips_path" method="POST">
+	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	  <h3><strong>title:</strong></h3><input type="text" name="get_title"></br>
+	  <h3><strong>content:</strong></h3><input type="text" name="get_content"></br>
+	  <a href="/gossips" class="btn btn-primary"><input type="submit" value="create"></a>
+	</form>
+</div>

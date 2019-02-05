@@ -1,2 +1,7 @@
 <h1>Gossips#show</h1>
 <p>Find me in app/views/gossips/show.html.erb</p>
+<form action="<%=:i%>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="nom_du_champ">
+  <input type="submit" value="Envoyer le formulaire">
+</form>

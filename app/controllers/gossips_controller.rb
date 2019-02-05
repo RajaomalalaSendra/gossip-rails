@@ -6,6 +6,7 @@ class GossipsController < ApplicationController
   end
 
   def new
+    puts params
   end
 
   def create
