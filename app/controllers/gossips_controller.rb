@@ -11,9 +11,12 @@ class GossipsController < ApplicationController
   end
 
   def create
-    @gossip = Gossip.new(title: "#{params[title:]}", content: "#{params[content:]}", user_id: rands(1..@user.length) )
+    @params = params
+    @gossip = Gossip.new()
+    @gossip.title = @params[:title]
+    @gossip.content = @params[:content]
     if @gossip.save
-      redirect_to gossips_index_path
+      redirect_to "/"
     else
       render :new
     end
