@@ -1,9 +1,37 @@
-<h1>Welcome All of you</h1>
-<p>Here are the list of the gossip:</p>
-<table><th><h2>Author</h2></th><th><h3>Title </h3></th></table>
-<% for i in 1..@users.length do i %>
-<table>
-	<td><p><%= @users.find(i).first_name%></p></td><td><p><%= @gossips.find(i).title %></p></td><td> <a href="user/<%=i%>">detail</a></td>
-</table>
-
+<div class="jumbotron">
+  <h1 class="display-3">Welcome All of you</h1>
+  <p class="lead">This is the gossip project of using boostrap, rails and sql database</p>
+  <hr class="my-4">
+  <p>Here are the list of the gossip:</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/" role="button">Learn more</a>
+  </p>
+</div>
+<% for i in 1..(@users.length/3).to_i do i %>
+<div class="card bg-light mb-3" style="max-width: 20rem;">
+  <div class="card-header"><%= @users.find(i).created_at%></div>
+  <div class="card-body">
+		<h5 class="card-title"><span class="badge badge-secondary">Author:</span> <%= @users.find(i).first_name%></h5>
+	    <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
+	    <a href="user/<%=i%>" class="btn btn-primary">Detail</a>
+  </div>
+</div>
+<%i+=1%>
+<div class="card bg-light mb-3" style="max-width: 20rem;">
+  <div class="card-header"><%= @users.find(i).created_at%></div>
+  <div class="card-body">
+		<h5 class="card-title"><span class="badge badge-secondary">Author:</span><%= @users.find(i).first_name%></h5>
+	    <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
+	    <a href="user/<%=i%>" class="btn btn-primary">Detail</a>
+  </div>
+</div>
+<%i+=1%>
+<div class="card bg-light mb-3" style="max-width: 20rem;">
+  <div class="card-header"><%= @users.find(i).created_at%></div>
+  <div class="card-body">
+		<h5 class="card-title"><span class="badge badge-secondary">Author:</span><%= @users.find(i).first_name%></h5>
+	    <p class="card-text"><span class="badge badge-secondary">Title:</span> <%= @gossips.find(i).title %></p>
+	    <a href="user/<%=i%>" class="btn btn-primary">Detail</a>
+  </div>
+</div>
 <% end %>

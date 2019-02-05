@@ -1,4 +1,6 @@
-<h1>User details:</h1>
-<p>author: <%=@all.first_name%> <%=@all.last_name%></p>
-<p>city: <%=@all.city.name%></p>
-<p>date of creation <%=@all.created_at%></p>
+<h1><span class="badge badge-primary">USER DETAILS</span></h1>
+<div class="alert alert-dismissible alert-success">
+	<p><strong>Author:</strong> <%=@all.first_name%> <%=@all.last_name%></p>
+	<p><strong>City:</strong> <%=@all.city.name%></p>
+	<p><strong>Date of creation:</strong> <%=@all.created_at%></p>
+</div>
