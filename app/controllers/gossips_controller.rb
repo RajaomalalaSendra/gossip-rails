@@ -8,15 +8,14 @@ class GossipsController < ApplicationController
   end
 
   def new
-    puts "#{params}"
   end
 
   def create
-    @gossip = Gossip.new(title: "#{params["get_title"]}", content: "#{params["get_content"]}", user_id: rands(1..@user.length) )
+    @gossip = Gossip.new(title: "#{params[title:]}", content: "#{params[content:]}", user_id: rands(1..@user.length) )
     if @gossip.save
-      redirect "/"
+      redirect_to gossips_index_path
     else
-      redirect "/gossips/new"
+      render :new
     end
   end
 
