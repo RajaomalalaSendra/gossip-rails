@@ -1,5 +1,22 @@
 <h1><span class="badge badge-primary">NEW GOSSIP</span></h1>
 <div class="alert alert-dismissible alert-success">
+	<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+      <%= label_tag 'Title' %>
+      <%= text_field_tag 'title', @post.title %>
+      <br /> <br />
+
+      <%= label_tag 'Body' %>
+      <%= text_area_tag 'body', @post.body %>
+      <br /> <br />
+
+      <%= label_tag 'Author' %>
+      <%= text_field_tag 'author', @post.author %>
+      <br /> <br />
+
+      <%= submit_tag "Create" %>
+
+    <% end %>
 	<form action="gossips_create_path" method="POST">
 	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	  <h3><strong>title:</strong></h3><input type="text" name="get_title"></br>
