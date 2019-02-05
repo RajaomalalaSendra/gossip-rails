@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'gossips/index'
+  get 'gossips/show'
+  get 'gossips/new'
+  get 'gossips/create'
+  get 'gossips/edit'
+  get 'gossips/update'
+  get 'gossips/destroy'
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/team', to: 'static_pages#team'
