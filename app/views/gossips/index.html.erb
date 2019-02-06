@@ -7,7 +7,7 @@
     <a class="btn btn-primary btn-lg" href="/gossips/new" role="button">New Gossip</a>
   </p>
 </div>
-<% for i in 1..(@gossips.length/5 + 5) do i %>
+<% for i in 1..(@gossips.length - 4) do %>
 <div class="row">
   <div class="column">
       <div class="card bg-light mb-3" style="max-width: 20rem;">
@@ -64,6 +64,4 @@
     </div>
   </div>
 </div> 
-
-
 <% end %>
